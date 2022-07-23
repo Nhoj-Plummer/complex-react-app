@@ -20,6 +20,7 @@ import ViewSinglePost from "./components/ViewSinglePost"
 import FlashMessages from "./components/FlashMessages"
 import { useEffect } from "react"
 import Profile from "./components/Profile"
+import EditPost from "./components/EditPost"
 
 function Main() {
   const initialState = {
@@ -71,6 +72,7 @@ function Main() {
             <Route path="/profile/:username/*" element={<Profile />} />
             <Route path="/" element={state.loggedIn ? <Home /> : <HomeGuest />} />
             <Route path="/post/:id" element={<ViewSinglePost />} />
+            <Route path="/post/:id/edit" element={<EditPost />} />
             <Route path="/create-post" element={<CreatePost />} />
             <Route path="/about-us" element={<About />} />
             <Route path="/terms" element={<Terms />} />
